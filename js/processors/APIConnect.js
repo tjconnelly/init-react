@@ -1,8 +1,7 @@
 import React from 'react'
 
 // APIConnect {{{
-export default const APIConnect = (DisplayComponent) =>
-//export const APIConnect = (DisplayComponent) =>
+export const APIConnect = (DisplayComponent) =>
   class extends React.Component {
     constructor(props) {
       super(props);
