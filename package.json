@@ -21,8 +21,9 @@
     "react-dom": "^16.5.2"
   },
   "scripts": {
-    "local":  "webpack-dev-server --hot --inline --mode=development",
-    "live":   "webpack-dev-server --hot --inline --mode=production",
-    "make":   "webpack -p"
+    "make":     "webpack -d",
+    "local":    "webpack-dev-server --hot --inline --mode=development",
+    "deliver":  "webpack -p",
+    "live":     "webpack-dev-server --hot --inline --mode=production"
   }
 }
