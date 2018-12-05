@@ -14,12 +14,16 @@ export const APIConnect = (DisplayComponent) =>
     }
     execute(){
       var params = this.props.params;
-      const datatag = params.datatag || 'data';
+      const host = params.host || null;
       const qstring = params.qstring || null;
+      if (host !== null) {
+        params.service = host+params.service;
+      }
       if (qstring !== null) {
         params.service = params.service+'?'+qstring;
         params.qstring = null;
       }
+      const datatag = params.datatag || 'data';
 
       this.setState({ isLoading: true });
       //console.log('APC execute: loading',params.service);
